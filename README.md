@@ -1,3 +1,2 @@
-# Project_cc
-First repository trial
+# Project_c
 this is a demo file
