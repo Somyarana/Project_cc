@@ -1,0 +1,7 @@
+f=open(r"C:\Users\cdac\Desktop\PGDBDA Sept 23\Day 7\Test.txt",mode="r")
+#print(f.read(10))
+#print(f.read(5))
+#L1=f.readlines()
+#print(L1[1])
+print(f.readline())
+f.close()
