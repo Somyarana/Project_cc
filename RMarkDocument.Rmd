@@ -1,0 +1,169 @@
+---
+title: "RMarkDocument"
+author: "CDAC Noida"
+date: "2024-01-02"
+output: html_document
+---
+
+Plain text is added like this
+
+to start the new paragraph just add two spaces at the end of the line  
+
+*italics* CDAC *italics*
+
+**bold** NOIDA **bold**
+
+superscript^2^
+
+~~strickthrough~~
+
+[link](https://r4ds.had.co.nz/r-markdown.html#:~:text=R%20Markdown%20provides%20an%20unified,files%2C%20slideshows%2C%20and%20more.)
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+endash: --
+
+emdash: ---
+
+ellipsis: ...
+
+inline equation: $A = \pi*r^{2}$
+
+horizontal rule (or slide break):
+
+--------------------------------------------------------------------------------
+
+> block quote
+
+-   unorderedlist
+-   item 1
+    -   sub item 1
+    -   sub item 2
+-   item 2
+    -   sub item 1
+    -   sun item 2
+
+
+1.  Item 1
+2.  Item 2
+    a.  Sub Item 1
+    b.  Sub Item 2
+3.  Item 3
+
+Table in the document  
+
+| Table | Header |
+|-------|--------|
+|cell1  | cell 2 |
+|cell 3 | cell 4 |
+
+the code block:
+
+```{r}
+paste("Hello","World!")
+```
+
+inline R code: `r paste("Hello","World!")` to add.  
+Inline code not executed: `paste("Hello", "World")`
+
+echo = TRUE the source code from being displayed
+
+```{r}
+dim(iris)
+```
+
+echo = FALSE will prevent the source code from being displayed
+
+```{r echo=FALSE}
+dim(iris)
+```
+
+
+Mathematical Equations or symbols
+
+subscript: $X_a$
+
+superscript: $X^{2}$
+
+adding the integral with the range $\int_0^x x^2 dx$
+
+Fraction: $\frac{x}{y}$
+
+square root: $\sqrt{x}$
+
+nth root: $\sqrt[n]{x}$
+
+Summation sign: Formula for mean $\sum_{i=1}^n \frac{x_i*f_i}{f_i}$
+
+$\prod_{k=1}^n$
+
+degree $^{\circ}$ Temperature: $15^{\circ}C$
+
+$\infty$
+
+$\theta$
+
+no option
+
+```{r}
+x <- 1:10
+x
+```
+
+echo = FALSE
+
+```{r echo = FALSE}
+x <- 1:10
+x
+```
+
+comment = NA
+
+```{r comment=NA}
+x <- 1:10
+x
+```
+
+
+comment = '#', prompt = TRUE
+
+```{r comment='#', prompt=TRUE}
+x <- 1:10
+x
+```
+
+echo = FALSE, fig.height = 4, fig.width = 4
+
+```{r echo=FALSE, fig.width=4, fig.height=4}
+y <- 10:1
+x <- 1:10
+plot(x,y)
+```
+
+
+```{r comment= "#"}
+Lmodel <- lm(Petal.Width ~ Petal.Length,
+             data = iris)
+
+plot(iris$Petal.Length, iris$Petal.Width,
+     col = "red",
+     xlab = "Petal Length",
+     ylab = "Petal Width",
+     pch = 16)
+grid()
+abline(Lmodel,
+       col = "blue",
+       lwd = 2)
+
+
+```
